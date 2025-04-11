@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <input id="inputNum" placeholder="Input a number" type="number">
+    <!-- <button>Check Number</button> -->
+    <p id="result"></p>
+    <h1 id="tittle">Hello,World</h1>
+
+    <p class="Form"> Hello</p>
+
+    <h1 id="heading">Arisile</h1>
+    <h1 class="head">Ade</h1>
+    <h1 id="last">John</h1>
+
+
+    <h1 id="Home" style="text-align: center;"> Homepage</h1>
+
+    <button style="padding: 20px; color: aqua; background-color: blue;">sign up</button>
+   
+</body>
+<script>
+    const title=document.getElementById("tittle")
+    console.log(tittle .innerText);
+    
+    const paragraphs = document.getElementsByClassName("Form")
+    console.log(paragraphs[0].innerText);
+    
+    const heading=document.querySelector("#heading")
+    console.log(heading.innerText);
+    
+    const head=document.getElementsByClassName("head")
+    console.log(head[0].innerText);
+
+    const last=document.querySelector("#last")
+    console.log(last.innerText);
+
+
+    document.getElementById("Home").innerText="Welcome"
+    
+    
+    
+    // document.querySelector("h1").setAttribute("disabled", force)
+    document.querySelector("h1").style.color="blue";
+    
+</script>
+</html>

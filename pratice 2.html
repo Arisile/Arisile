@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1 class="Form" style="text-align: center;">Welcome</h1>
+   <p id="title" style="text-decoration: solid;">You are welcome</p>
+
+
+   <h1 class="Head">
+    This my name
+    
+   </h1>
+   <h1 id="Heading">Adesile</h1>
+   
+
+<button style="padding: 20px; color: black; background-color: aqua;" >sign up</button>
+   
+</body>
+ <script>
+    const Form=document.getElementsByClassName("Form")
+    console.log(Form[0].innerText);
+
+    const title=document.getElementById("title")
+    console.log(title.innerText);
+    
+    const Head=document.querySelector("#Heading");
+    console.log(Head.innerText);
+    
+    document.querySelector("button").setAttribute("disabled", true)
+
+setTimeout(function() {
+    alert("execute after 2sec")
+}, 1000)
+
+document.querySelector("p").style.color="blue"
+ </script>
+</html>

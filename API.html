@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+</head>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+    }
+    #product-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .product {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+    .product h3 {
+      margin: 0 0 10px;
+      color: #333;
+    }
+    .product p {
+      font-size: 14px;
+      color: #555;
+    }
+    .product button {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+  </style>
+<body>
+    <h1>API`s JavaScript</h1>
+    <h1>product List</h1>
+    <div id="product-list"></div>
+</body>
+<script>
+    async function getProduct() {
+      try {
+       const response=await fetch('https://dummyjson.com/products')
+       const data = await response.json()
+       const products = data.products;
+       console.log(products);
+       
+       
+    const productList=document.querySelector("#product-list");
+    productList.innerHTML="";
+    
+    products.forEach((product)=>{
+        let item=document.createElement("div");
+        item.classList.add("product");
+        item.innerHTML=`
+                <img src="${product.thumbnail}"alt="${product.title}">
+                <h3>${product.title}</h3>
+                <p>${product.description}</p>
+                <p>${product.price}</p>
+                <button>Add to cart</button>
+        `;
+
+        productList.appendChild(item);
+  
+        
+    });
+
+   
+       
+      } catch(error) {
+        console.log("error fetching data",error);
+        
+      }  
+    }
+    getProduct()
+
+const productList=document.querySelector("#product-list");
+productList.innerHTML="";
+   
+
+
+</script>
+</html>

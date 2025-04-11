@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Regex&Function</h1>
+</body>
+<script>
+    const phonePattern=/\d/;
+    console.log(phonePattern.test("364747848484848"));
+
+    console.log(/^Hello/.test("Hello world"));
+    console.log(/^Hello/.test(" Say Hello"));
+
+    console.log(/[aeiou]/.test("arisile"));
+    
+    const emailPattern=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,}$/;
+    console.log(emailPattern.test("testTR.%@exampleAAY-.com"));
+    console.log(emailPattern.test("invalid-email"));
+    
+    function Arisile() {
+        console.log("Hello world");
+        
+    }
+    Arisile();
+
+
+    function greet(name){
+        console.log("What`s up" + name);
+        
+    }
+    greet("Arisile")
+
+
+    function add(a, b) {
+       return a * b ;
+    }
+    let sum = add(3,5) 
+    console.log(sum);
+
+
+    setTimeout( function() {
+       alert("executed after 2 seconds");
+        
+    }, 10000);
+
+
+    function sayHello(){
+        console.log("hello world");
+        
+    }
+    sayHello()
+
+    function greet(name){
+        console.log("hello" + name);
+        
+    }
+    greet("Arisile")
+
+    function square(num) {
+        return num*num
+    }
+    console.log(square(5));
+    
+    
+
+    
+</script>               
+</html>                                                                 

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let studentScore=new Map([
+        ["Alice","85"],
+        ["Bob","92"],
+        ["Charlie","78"],
+        ["Diana","88"]
+    ])
+    console.log(studentScore);
+    console.log(studentScore.get("Bob"));
+    console.log(studentScore.set("Charlie","80"));
+    console.log(studentScore.set("Eve","95"));
+    console.log(studentScore.has("Alice"));
+    console.log(studentScore.delete("Diana"));
+    console.log(studentScore.size);
+    
+    
+</script>
+</html>

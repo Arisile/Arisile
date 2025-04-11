@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://kit.fontawesome.com/f7b187fe29.js" crossorigin="anonymous"></script>
+    <style>
+        /* /* body{ 
+            padding: 
+        /* } */
+        /* div>button{
+            padding: 20px;
+            color: aliceblue;
+            border-radius: 5px;
+            font-weight: bold;
+            background-color: blueviolet;
+            cursor: pointer;
+        
+            
+        } */
+        /* nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: beige;
+            padding: 10px 20px;
+        } */
+        /* ul{
+            display: flex;
+            gap: 50px;
+            font-size: large;
+        }
+        li{
+            list-style: none;
+        } */
+        /* .form{
+           background-color: green;
+           padding: 20px;
+           margin-top: 10px;
+           margin-bottom: 20px;
+
+
+        } */
+        /* .div{
+            background-color: red;
+            margin-left: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            
+            
+        }  */
+        
+    </style>
+</head>
+<body>
+ <!-- <nav>
+    <div id="logo">LOGO</div>
+    <div>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact Us</li>
+        </ul>
+    </div>
+    <h3 id="welcome">Welcom User</h3>
+</nav>
+<div>
+    <button id="btn" class="form">Sign In</button>
+ 
+
+ <button id="class" class="div">Sign Out</button>
+
+ 
+ 
+</div>
+
+
+     <h1 id="title" style="text-align: center; ">JavaScript DOM contd...</h1>
+    <button id="btn" style="height: 50px; width: 100px;">Click me</button>
+    <h1 id="welcome"></h1>
+    <h1 class="form"></h1>  -->
+
+  
+    <i class="fa fa-address-book" aria-hidden="true"></i>    
+
+    <input type=" text" id="taskInput" placeholder="Enter a Task">
+    <button id="addTask">Add Task</button>
+    <ul id="taskList"></ul>
+
+<input id="input" type="text">
+<button id="check">Check</button>
+<p id="result"></p>
+
+</body>
+<script>
+//    function clickMe() {
+//      alert("clicked")
+//    }
+
+    // document.getElementById("btn").addEventListener("click", function() {
+         
+    //  document.getElementById("welcome").innerText="WELCOME ARISILE";
+    // document.getElementsByClassName("form").innerText="WELCOME,ARISILE"
+    // });
+
+    // document.getElementById("btn").addEventListener("click",function(){
+    //     document.getElementById("welcome").innerText="Welcome,Arisile";
+    //    document.querySelector("div").style.color="green"
+    // });
+
+    // document.getElementById("class").addEventListener("click",function(){
+    //     document.getElementById("welcome").innerText="Log Out";
+    //     document.querySelector("div").style.color="red"
+    // }) ;  -->
+ 
+//    let newElement=document.createElement('p')
+//    newElement.innerText="Thus is a new pharagraph"
+//    document.body.appendChild(newElement)
+    
+    // document.getElementById("btn").addEventListener("click",function(){
+    //     let newElement=document.createElement('p')
+    //     newElement.innerText="Thus is a new pharagraph"
+    //     document.body.appendChild(newElement)
+    // })
+    // document.getElementById("btn").addEventListener("click",function(){
+    //     let input=document.querySelector("#input")
+    //     console.log(input.value);
+    // })
+    
+    document.getElementById("addTask").addEventListener("click",function(){
+        const input=document.getElementById("taskInput");
+        const li=document.createElement("li")
+        if (input.value=== "")return;
+        li.innerText=input.value;
+        // add delete button
+        const deleteBtn=document.createElement("button");
+        deleteBtn.innerText ="delete";
+        deleteBtn.style.marginLeft="20px"
+        deleteBtn.addEventListener("click",function(){
+            li.remove();
+        });
+
+        li.appendChild(deleteBtn)
+        document.getElementById("taskList").appendChild(li)
+        li.style.listStyle="none"
+        input.value="";
+    })
+
+
+    document.querySelector("#check").addEventListener("click",function(){
+        input=document.querySelector("#input");
+        if (input.value% 2===0) {
+           document.querySelector("#result") .innerText="even number";
+        }else{
+            document.querySelector("#result").innerText="odd number";
+        }
+    })
+</script>
+</html>    
