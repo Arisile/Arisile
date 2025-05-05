@@ -10,24 +10,25 @@
   src="https://code.jquery.com/jquery-3.7.1.js"
   integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
   crossorigin="anonymous"></script>
-  <!-- <button id="btn">click me</button> -->
+   <button id="btn">click me</button>
   <button id="hide">click me</button> 
   <p id="text">This is a paragraph</p> 
   <!-- <ul id="list"></ul>  -->
 <script>
-    $("#btn").fadeTo();
-    $("#text").text("hello world")
+    // $("#btn").fadeTo();
+    // $("#text").text("hello world")
 
     // $("#title").text("This is a new paragraph")
     // $("#list").append("<li>New item<li>")
 
-    // $("#button").click(function(){
-    //    $("p").css("color", "red").css("font-weight", "bold")
+    $("#btn").click(function(){
+       $("p").css("color", "red").css("font-weight", "bold")
+        console.log("button clicked");
         
-    // })
-    // $("#hide").click(function(){
-    //     $("p").hide();
-    // })
+    })
+        $("#hide").click(function(){
+        $("p").hide();
+    })
 </script>
 </body>
 </html>
